@@ -24,4 +24,4 @@ INSERT INTO bibliotheque.clients
 VALUES
 ('00000001', 'Hu', 'Tao', 'Wangsheng Funeral Parlor', 16.25);
 
-
+SELECT * FROM bibliotheque.clients;
