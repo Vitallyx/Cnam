@@ -9,4 +9,4 @@ function hello(string $name)
         return "Hello $name";
     }
 }
-echo hello("");
+hello("");

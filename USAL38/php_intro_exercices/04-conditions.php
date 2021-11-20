@@ -10,9 +10,9 @@ function isMajor(int $x)
         return false;
     }
 }
-isMajor(12);
-isMajor(18);
-isMajor(42);
+echo isMajor(12);
+echo isMajor(18);
+echo isMajor(42);
 ?><br>
 
 
@@ -45,7 +45,7 @@ getRetired(65);
 <?php
 //EXERCICE 4.C
 //----------------------------------------------------------------------------------
-function getMax(float $x, $y, $z)
+function getMax(float $x, float $y, float $z)
 {
     if ($x == $y || $x == $z || $z == $y) {
 ?> <br>
@@ -70,7 +70,7 @@ function capitalCity(string $x)
     $y = strtolower($x);
     switch ($y) {
         case "france":
-            echo "Paris<br>";
+            echo "Paris <br>";
             break;
         case "allemagne":
             echo "Berlin <br>";
