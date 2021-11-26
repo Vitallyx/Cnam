@@ -8,32 +8,34 @@
  
  CREATE TABLE subjects
  (
- 	subject_id INT PRIMARY KEY,
- 	subject_name VARCHAR(64) NOT NULL
+ 	subject_id INT,
+ 	subject_name VARCHAR(64) NOT NULL,
+ 	PRIMARY KEY (subject_id)
  );
  
   CREATE TABLE people
   (
-  	person_id INT PRIMARY KEY,
+  	person_id INT,
   	person_lastname VARCHAR(100) NOT NULL,
   	person_firstname VARCHAR(50) NOT NULL,
-  	person_gender CHAR(1) NOT NULL
+  	person_gender CHAR(1) NOT NULL,
+  	PRIMARY KEY (person_id)
   );
   
   CREATE TABLE roles
   (
-  	role_id INT PRIMARY KEY,
-  	role_name VARCHAR(50) NOT NULL
+  	role_id INT,
+  	role_name VARCHAR(100) NOT NULL,
+  	PRIMARY KEY (role_id)
   );
   
   CREATE TABLE movies
   (
-  	movie_id INT PRIMARY KEY,
+  	movie_id INT,
   	movie_title VARCHAR(150) NOT NULL,
   	movie_year SMALLINT NOT NULL,
   	movie_lenght INT NOT NULL,
   	movie_awards CHAR(3),
-  	movie_popularity TINYINT NOT NULL
+  	movie_popularity TINYINT NOT NULL,
+  	PRIMARY KEY (movie_id)
   );
-  
-  
