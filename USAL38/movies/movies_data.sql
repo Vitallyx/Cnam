@@ -12,3 +12,5 @@ VALUES
 (3, 'Romance');
 
 SELECT * FROM subjects;
+
+
