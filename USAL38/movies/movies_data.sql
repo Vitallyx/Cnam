@@ -47,11 +47,11 @@ SELECT * FROM roles;
 INSERT INTO people
 (person_id, person_lastname, person_firstname, person_gender)
 VALUES
-(1,'Iona','Irelia','W'),
+(1,'Iona','Irelia','F'),
 (2,'Demacia','Garen','M'),
 (3,'Nexus','Darius','M'),
-(4,'Darkin','Kayn','H'),
-(5,'Yoordle','Teemo','H')
+(4,'Darkin','Kayn','M'),
+(5,'Yoordle','Teemo','M')
 ;
 
 SELECT * FROM people;
