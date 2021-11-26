@@ -37,12 +37,18 @@
   	movie_lenght INT NOT NULL,
   	movie_awards CHAR(3) NULL,
   	movie_popularity TINYINT NOT NULL,
-  	subject_id INT NOT NULL FOREIGN KEY,
+  	subject_id INT NOT NULL,
+  	FOREIGN KEY (subject_id) REFERENCES subjects(subject_id),
   	PRIMARY KEY (movie_id)
   );
   
-  CREATE TABLE DEFINES
+  CREATE TABLE movies_people
   (
-  
-  
+  movie_id INT,
+  person_id INT,
+  role_id INT,
+  PRIMARY KEY (movie_id, person_id, role_id),
+  FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+  FOREIGN KEY (person_id) REFERENCES person(person_id),
+  FOREIGN KEY (role_id) REFERENCES role(role_id)
   );
