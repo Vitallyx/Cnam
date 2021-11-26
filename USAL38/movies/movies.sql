@@ -35,7 +35,14 @@
   	movie_title VARCHAR(150) NOT NULL,
   	movie_year SMALLINT NOT NULL,
   	movie_lenght INT NOT NULL,
-  	movie_awards CHAR(3),
+  	movie_awards CHAR(3) NULL,
   	movie_popularity TINYINT NOT NULL,
+  	subject_id INT NOT NULL FOREIGN KEY,
   	PRIMARY KEY (movie_id)
+  );
+  
+  CREATE TABLE DEFINES
+  (
+  
+  
   );
