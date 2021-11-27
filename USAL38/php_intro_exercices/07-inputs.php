@@ -58,5 +58,6 @@ function userLogin(string $x, string $y, array $z)
 
 echo userLogin('joe', 'Azer1234!', $users);
 echo userLogin('jack', 'd5DDZADA@SSSs', $users);
+echo userLogin('jack', 'd5DDZADA@SSSs', $users);
 
 ?>
