@@ -9,7 +9,6 @@ function htmlList(string $x, array $y)
 
     /* Essayer avec explode */
 
-
     echo ('<h3>' . $x . '</h3>');
     if (!$y == []) {
         echo ('<ul>');
