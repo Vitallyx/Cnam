@@ -13,7 +13,7 @@ function htmlList(string $x, array $y)
     if (!$y == []) {
         echo ('<ul>');
         foreach ($y as $value) {
-            echo ('<li>' . strt($y) . '</li>');
+            echo ('<li>' . $y . '</li>');
         }
         echo ('</ul>');
     } else {

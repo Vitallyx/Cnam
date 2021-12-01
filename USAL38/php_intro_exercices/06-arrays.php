@@ -38,8 +38,7 @@ function sortItems(array $name)
     if (empty($name)) {
         return [];
     } else {
-        rsort($name);
-        return $name;
+        return rsort($name);
     }
 }
 var_dump(sortItems($names));

@@ -3,10 +3,10 @@
 //----------------------------------------------------------------------------------
 function stringLength(string $x)
 {
-    if (strlen($x) >= 9) {
+    if (strlen($x) > 9 && !empty($x)) {
         return true;
     }
-    return false;
+    return 'false';
 }
 echo stringLength("motDePasse");
 echo stringLength("azer");
