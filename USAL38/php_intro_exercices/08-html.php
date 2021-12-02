@@ -1,23 +1,16 @@
 <?php
 //EXERCICE 8.A
 //----------------------------------------------------------------------------------
-require '07-inputs.php';
 $names = ['Joe', 'Jack', 'Léa', 'Zoé', 'Néo'];
 
 function htmlList(string $x, array $y)
 {
-
-    /* Essayer avec explode */
-
-    echo ('<h3>' . $x . '</h3>');
-    if (!$y == []) {
-        echo ('<ul>');
-        foreach ($y as $value) {
-            echo ('<li>' . $y . '</li>');
-        }
-        echo ('</ul>');
+    if (empty($y)) {
+        echo ("<h3>" . $x . "</h3>" . "<br>" . "<p>" . "Aucun résultat");
     } else {
-        echo ('<p>Le tableau est vide</p>');
+        sort($y);
+        $z = implode("<li>", $y);
+        echo ("<h3>" . $x . "</h3>" . "<ul>" . "<li>" . $z);
     }
 }
 htmlList("Liste des personnes", $names);
