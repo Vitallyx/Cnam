@@ -6,7 +6,8 @@ function getSum(int $x, int $y)
     return $x + $y;
 }
 echo getSum(5, 4);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -17,7 +18,8 @@ function getSub(int $x, int $y)
     return $x - $y;
 }
 echo getSum(5, 4);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -28,7 +30,8 @@ function getMulti(float $x, float $y)
     return round(($x * $y), 2);
 }
 echo getMulti(15220.145, 49.1);
-?><br>
+?>
+<hr>
 
 
 <?php

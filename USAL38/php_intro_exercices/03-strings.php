@@ -6,7 +6,8 @@ function  getMC2()
     return "Albert Einstein";
 }
 echo getMC2();
-?><br>
+?>
+<hr>
 
 <?php
 //EXERCICE 3.B
@@ -16,7 +17,8 @@ function  getUserName(string $x, string $y)
     return $x . $y;
 }
 echo getUserName('Bryan', 'Muller');
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -27,7 +29,8 @@ function getFullName(string $x, string $y)
     return strtolower($x) . ' ' . strtoupper($y);
 }
 echo getFullName('BRYAN', 'muller');
-?><br>
+?>
+<hr>
 
 
 <?php

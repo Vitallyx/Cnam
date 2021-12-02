@@ -6,7 +6,8 @@ function getToday()
     echo date('d/m/Y');
 }
 getToday();
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -51,4 +52,4 @@ getTimeLeft("2021-12-01");
 getTimeLeft("2025-05-16");
 getTimeLeft("2021-05-30");
 getTimeLeft("2022-10-01");
-?><br>
+?>

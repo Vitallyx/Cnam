@@ -12,7 +12,8 @@ function firstItem(array $name)
     }
 }
 echo firstItem($names);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -27,7 +28,8 @@ function lastItem(array $name)
     }
 }
 echo lastItem($names);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -42,7 +44,8 @@ function sortItems(array $name)
     }
 }
 var_dump(sortItems($names));
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -58,4 +61,4 @@ function stringItems(array $name)
     }
 }
 var_dump(stringItems($names));
-?><br>
+?>

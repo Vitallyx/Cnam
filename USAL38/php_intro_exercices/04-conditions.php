@@ -13,7 +13,8 @@ function isMajor(int $x)
 echo isMajor(12);
 echo isMajor(18);
 echo isMajor(42);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -39,7 +40,8 @@ getRetired(60);
 getRetired(72);
 getRetired(-2);
 getRetired(65);
-?><br>
+?>
+<hr>
 
 
 <?php
@@ -60,7 +62,8 @@ function getMax(float $x, float $y, float $z)
 echo getMax(45.2, 45.2, 12.55);
 echo getMax(1415.125, 45.2, 12.55);
 echo getMax(151, 411452.26458565, 12.55);
-?><br>
+?>
+<hr>
 
 <?php
 //EXERCICE 4.D
@@ -97,4 +100,4 @@ function capitalCity(string $x)
 capitalCity('France');
 capitalCity('Angleterre');
 capitalCity('Japon');
-?><br>
+?>
