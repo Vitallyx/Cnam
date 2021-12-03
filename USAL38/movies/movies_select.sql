@@ -41,7 +41,7 @@ SELECT  movies.subject_id, movie_title, subject_name,  movie_year FROM movies
 	ORDER BY movie_year DESC
 ;
 	
-SELECT person_lastname, person_firstname, role_name FROM people
+SELECT person_lastname, person_firstname, role_name, movie_title FROM people
 	JOIN movies_people ON people.person_id = movies_people.person_id
 	JOIN roles ON roles.role_id = movies_people.role_id
 ;
