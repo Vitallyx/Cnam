@@ -25,3 +25,6 @@ SELECT movie_title, movie_year FROM movies ORDER BY movie_title DESC;
 SELECT movie_title, movie_year FROM movies
 	WHERE movie_year > 1950
 	ORDER BY movie_title DESC;
+	
+SELECT movie_title, subject_name FROM movies
+	JOIN subjects ON movies.subject_id = subjects.subject_id;
