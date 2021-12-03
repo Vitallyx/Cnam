@@ -33,6 +33,9 @@ VALUES
 (4, 'Les temps modernes', 1936, 170, 'Yes', 50, 1)
 ;
 
+SELECT * FROM movies;
+SELECT * FROM subjects;
+
 INSERT INTO roles
  (role_id, role_name)
 VALUES
@@ -40,6 +43,8 @@ VALUES
 (2,'Actor'),
 (3,'Actress')
 ;
+
+SELECT * FROM roles;
 
 INSERT INTO people
  (person_id, person_lastname, person_firstname, person_gender)
@@ -51,6 +56,8 @@ VALUES
 (5,'Yoordle','Teemo','M')
 ;
 
+SELECT * FROM people;
+
 INSERT INTO movies_people 
  (person_id, role_id, movie_id)
 VALUES
@@ -58,7 +65,3 @@ VALUES
 ('1', '2', '1'),
 ('1', '3', '1'
 
-SELECT * FROM movies;
-SELECT * FROM roles;
-SELECT * FROM people;
-SELECT * FROM subjects;
