@@ -1,5 +1,6 @@
 <?php
 require 'inc/header.php';
+
 /*
 *Je récupère la paramètre page depuis l'url 
 *je vérifie si la valeur de $page correspond

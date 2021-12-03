@@ -19,15 +19,15 @@ echo stringLength("azer");
 //----------------------------------------------------------------------------------
 function passwordCheck(string $x)
 {
-    $regex = "(?=.\d)(?=.[A-Za-z])[0-9A-Za-z@#-_$%^&+=§!?]";
+    $regex = "/^(?=^.{9,}$)((?=.*\d)|(?=.*\W))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/";
 
-    if (!preg_match("/^$regex$/", $x) && stringLength($x) === false) {
+    if (!preg_match($regex, $x) && stringLength($x) === false) {
         return "false";
     }
     return 'true';
 }
 echo passwordCheck("r21");
-echo passwordCheck("dc521sqcsqzer");
+echo passwordCheck("dc521dSsqzer");
 
 ?>
 <hr>
