@@ -10,7 +10,7 @@ DELETE FROM people;
 DELETE FROM subjects;
 
 INSERT INTO subjects
-(subject_id, subject_name)
+ (subject_id, subject_name)
 VALUES 
 (1,'Comedy'),
 (2,'Action'),
@@ -25,7 +25,7 @@ VALUES
 ;
 
 INSERT INTO movies
-(movie_id, movie_title, movie_year, movie_lenght, movie_awards, movie_popularity, subject_id)
+ (movie_id, movie_title, movie_year, movie_lenght, movie_awards, movie_popularity, subject_id)
 VALUES
 (1, 'My movie', 2021, 260, NULL, 99, 2),
 (2, 'Scarface', 1983, 170, 'Yes', 100, 2),
@@ -33,22 +33,16 @@ VALUES
 (4, 'Les temps modernes', 1936, 170, 'Yes', 50, 1)
 ;
 
-SELECT * FROM movies;
-
-SELECT * FROM subjects;
-
 INSERT INTO roles
-(role_id, role_name)
+ (role_id, role_name)
 VALUES
 (1,'Director'),
 (2,'Actor'),
 (3,'Actress')
 ;
 
-SELECT * FROM roles;
-
 INSERT INTO people
-(person_id, person_lastname, person_firstname, person_gender)
+ (person_id, person_lastname, person_firstname, person_gender)
 VALUES
 (1,'Iona','Irelia','F'),
 (2,'Demacia','Garen','M'),
@@ -57,5 +51,14 @@ VALUES
 (5,'Yoordle','Teemo','M')
 ;
 
-SELECT * FROM people;
+INSERT INTO movies_people 
+ (person_id, role_id, movie_id)
+VALUES
+('1', '1', '1'),
+('1', '2', '1'),
+('1', '3', '1'
 
+SELECT * FROM movies;
+SELECT * FROM roles;
+SELECT * FROM people;
+SELECT * FROM subjects;

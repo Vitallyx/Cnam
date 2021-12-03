@@ -48,7 +48,7 @@
   person_id INT,
   role_id INT,
   PRIMARY KEY (movie_id, person_id, role_id),
-  FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
-  FOREIGN KEY (person_id) REFERENCES person(person_id),
-  FOREIGN KEY (role_id) REFERENCES role(role_id)
+  FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
+  FOREIGN KEY (person_id) REFERENCES people(person_id),
+  FOREIGN KEY (role_id) REFERENCES roles(role_id)
   );

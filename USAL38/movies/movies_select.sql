@@ -26,6 +26,10 @@ SELECT movie_title, movie_year FROM movies
 	WHERE movie_year > 1950
 	ORDER BY movie_title DESC;
 	
+/* Sélectionner les films dont l'annnée est supérieure à 1950 
+avec les informations sur la catégorie (JOIN)
+et on trie les résultats par année et par ordre décroissant */
+	
 SELECT  movies.subject_id, movie_title, subject_name,  movie_year FROM movies
 	JOIN subjects ON movies.subject_id = subjects.subject_id
 	WHERE movie_year > 1950
