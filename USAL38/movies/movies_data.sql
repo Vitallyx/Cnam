@@ -4,6 +4,7 @@ seront exécutées dans cette base de données */
 
 USE db_movies;
 
+DELETE FROM movies_people;
 DELETE FROM movies;
 DELETE FROM roles;
 DELETE FROM people;
@@ -62,6 +63,7 @@ INSERT INTO movies_people
  (person_id, role_id, movie_id)
 VALUES
 ('1', '1', '1'),
-('1', '2', '1'),
-('1', '3', '1'
+('1', 1', '2'),
+('1', '2', '1')
+;
 
