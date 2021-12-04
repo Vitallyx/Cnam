@@ -19,16 +19,17 @@ echo stringLength("azer");
 //----------------------------------------------------------------------------------
 function passwordCheck(string $x)
 {
-    $regex = "/^(?=^.{9,}$)((?=.*\d)|(?=.*\W))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/";
-
-    if (!preg_match($regex, $x) && stringLength($x) === false) {
-        return "false";
+    $majChars = preg_match('@[A-Z]{1,}@', $x);
+    $minChars = preg_match('@[a-z]{1,}@', $x);
+    $numbers = preg_match('@[\d]{1,}@', $x);
+    $specialChars = preg_match('@[\W]{1,}@', $x);
+    if ($majChars && $minChars && $numbers && $specialChars && stringLength($x) === true) {
+        return true;
     }
-    return 'true';
+    return false;
 }
-echo passwordCheck("r21");
-echo passwordCheck("dc521dSsqzer");
-
+echo passwordCheck("sdzaDer-4321");
+echo passwordCheck("123sdz]Azer");
 ?>
 <hr>
 
@@ -44,23 +45,16 @@ $users = [
 
 function userLogin(string $x, string $y, array $z)
 {
-    $users = [
-        'joe' => 'Azer1234!',
-        'jack' => 'Azer-4321',
-        'admin' => '1234_Azer',
-    ];
-
-    $z = [
-        $x => $y
-    ];
-
     if (passwordCheck($y)) {
-        if (array_search($z, $users)) {
-            return true;
+        if (array_search($y, $z) == $x) {
+            return "true";
         }
-        return false;
+        return "false";
     }
-    return false;
+    return "false";
 }
-echo userLogin('joe', 'Azer1234!', ($users))
+
+echo userLogin('joe', 'Azer1234!', $users);
+echo userLogin('jack', 'd5DDZADA@SSSs', $users);
+echo userLogin('jack', '1234_Azer', $users);
 ?>
