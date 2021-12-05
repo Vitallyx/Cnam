@@ -7,9 +7,8 @@ function firstItem(array $name)
 {
     if (empty($name)) {
         return null;
-    } else {
-        return ($name[0]);
     }
+    return ($name[0]);
 }
 echo firstItem($names);
 ?>
@@ -23,9 +22,8 @@ function lastItem(array $name)
 {
     if (empty($name)) {
         return null;
-    } else {
-        return end($name);
     }
+    return end($name);
 }
 echo lastItem($names);
 ?>
@@ -39,9 +37,8 @@ function sortItems(array $name)
 {
     if (empty($name)) {
         return [];
-    } else {
+    } else
         return rsort($name);
-    }
 }
 var_dump(sortItems($names));
 ?>

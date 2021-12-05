@@ -46,12 +46,11 @@ $users = [
 function userLogin(string $x, string $y, array $z)
 {
     if (array_search($y, $z) == $x && passwordCheck($y) === true) {
-        return "true";
-    } else {
-        return "false";
+        return true;
     }
+    return false;
 }
-echo userLogin('joe', 'Azer1234!', $users);
+echo userLogin('joe', 'Azers1234!', $users);
 echo userLogin('jack', 'sszer1234!', $users);
 echo userLogin('jack', '1234_Azer', $users);
 

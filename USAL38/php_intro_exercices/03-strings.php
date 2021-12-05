@@ -38,7 +38,6 @@ echo getFullName('BRYAN', 'muller');
 //----------------------------------------------------------------------------------
 function askUser(string $x, string $y)
 {
-
     return "Bonjour " . getFullName($x, $y) . ", connaissez-vous " . getMC2() . " ?";
 }
 echo askUser('BRYAN', 'muller');

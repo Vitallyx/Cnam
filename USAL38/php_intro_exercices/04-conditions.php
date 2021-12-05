@@ -6,9 +6,8 @@ function isMajor(int $x)
     $majorité = 18;
     if ($x >= $majorité) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 echo isMajor(12);
 echo isMajor(18);

@@ -41,8 +41,8 @@ function getDiv(int $x, int $y)
 {
     if ($y == 0 || $x == 0) {
         return 0;
-    } else
-        return round(($x / $y), 2);
+    }
+    return round(($x / $y), 2);
 }
 echo getDiv(15220.145, 49.1);
 ?>
