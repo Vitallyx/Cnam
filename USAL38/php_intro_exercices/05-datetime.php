@@ -18,12 +18,13 @@ function getTimeLeft(string $date, $format = 'Y-m-d')
 {
     $today = date($format);
     $today2 = new DateTime('now');
-
-
     $x = DateTime::createFromFormat($format, $date);
+
     if ($x->format($format) == $date) {
+
         $date2 = new DateTime($date);
         $diference = $today2->diff($date2);
+
         if ($date > $today) {
             if ($diference->y == 0 && $diference->m > 1) {
                 echo "Dans " . $diference->m . " mois, " . $diference->d . " jours <br>";
@@ -35,7 +36,6 @@ function getTimeLeft(string $date, $format = 'Y-m-d')
                 echo "Dans " . $diference->y . " ans, " . $diference->m . " mois, " . $diference->d . " jours <br>";
             }
         }
-
         if ($date < $today) {
             echo "Évènement passé <br>";
         }

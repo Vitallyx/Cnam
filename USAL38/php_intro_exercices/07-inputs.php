@@ -3,10 +3,10 @@
 //----------------------------------------------------------------------------------
 function stringLength(string $x)
 {
-    if (strlen($x) <= 9) {
-        return false;
+    if (strlen($x) > 8) {
+        return true;
     }
-    return true;
+    return false;
 }
 echo stringLength("mPasskkkke");
 echo stringLength("azer");
@@ -21,15 +21,15 @@ function passwordCheck(string $x)
 {
     $majChars = preg_match('@[A-Z]{1,}@', $x);
     $minChars = preg_match('@[a-z]{1,}@', $x);
-    $numbers = preg_match('@[\d]{1,}@', $x);
+    $numbers = preg_match('@[0-9]{1,}@', $x);
     $specialChars = preg_match('@[\W]{1,}@', $x);
     if ($majChars && $minChars && $numbers && $specialChars && stringLength($x) === true) {
         return true;
     }
     return false;
 }
-echo passwordCheck("sdzaDer-4321");
-echo passwordCheck("123sdz]Azer");
+echo passwordCheck("Azer1234!");
+echo passwordCheck("Azer-4321");
 ?>
 <hr>
 
@@ -45,19 +45,14 @@ $users = [
 
 function userLogin(string $x, string $y, array $z)
 {
-    if (passwordCheck($y)) {
-        if (array_search($y, $z) == $x) {
-            return "true";
-        }
+    if (array_search($y, $z) == $x && passwordCheck($y) === true) {
+        return "true";
+    } else {
         return "false";
     }
-    return "false";
 }
-
-
-
 echo userLogin('joe', 'Azer1234!', $users);
-echo userLogin('jack', 'd5DDZADA@SSSs', $users);
-echo userLogin('jack', 'd5DDZADA@SSSs', $users);
+echo userLogin('jack', 'sszer1234!', $users);
+echo userLogin('jack', '1234_Azer', $users);
 
 ?>
