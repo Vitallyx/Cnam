@@ -8,6 +8,18 @@ class Subject
     /** @var int $subject_id The subject name0 */
     private string $subject_name;
 
+
+    /**
+     * Constructeur de l'objet
+     * (initialiser les attrivuts de l'objet)
+     */
+    public function __construct()
+    {
+        $this->subject_id = 0;
+        $this->subject = 'Unknown Category';
+        echo 'Je suis dans le constructeur de Subject';
+    }
+
     /**
      * Get the subject identifier
      * @return int The subject identifier
