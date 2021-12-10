@@ -44,6 +44,10 @@ class Subject
      */
     public function setSubjectName(string $name): void
     {
-        $this->subject_name = $name;
+        if (strlen($name) >= 2) {
+            $this->subject_name = $name;
+        } else {
+            throw new Exception("Name is too short (minimum 2 characters)");
+        }
     }
 }

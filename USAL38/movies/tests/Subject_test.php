@@ -1,12 +1,21 @@
 <?php
 
+// Inclut le contenu des fichiers
 require '../Models/Subject.php';
 
-$sf = new Subject();
+try {
+    $sf = new Subject();
+    $drama = new Subject();
+    $comedy = new Subject();
+    echo $sf->getSubjectName(); // Unknow Category
+    echo '<hr>';
 
-$sf->setSubjectName("Science-Fiction");
+    $sf->setSubjectName("Science-Fiction");
+    echo $sf->getSubjectName(); // Science Fiction
+    echo '<hr>';
 
-echo $sf->getSubjectName();
-
-
-var_export(($sf));
+    $sf->setSubjectName(("P"));
+} // Fin du try
+catch (Exception $e) {
+    echo $e->getMessage();
+}
