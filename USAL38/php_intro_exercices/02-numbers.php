@@ -17,7 +17,7 @@ function getSub(int $x, int $y)
 {
     return $x - $y;
 }
-echo getSum(5, 4);
+echo getSub(5, 4);
 ?>
 <hr>
 
