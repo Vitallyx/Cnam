@@ -3,6 +3,10 @@
 require 'DbConnect.php';
 
 $connection = new DbConnect();
+
+$toto = new DbConnect();
+
+
 // Connexion à la base de données
 
 // $host = "localhost"; // Adresse du serveur de base de données

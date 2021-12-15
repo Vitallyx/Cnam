@@ -20,7 +20,8 @@ class DbConnect
     /**
      *  CONSTRUCTOR 
      */
-    public function __construct()
+    public function __construct(string $host, int $port, string $dbname, string $username, string $password)
     {
+        $this->host = $host;
     }
-}
+} // End of class
