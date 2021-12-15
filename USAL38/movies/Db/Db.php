@@ -21,9 +21,17 @@ $sql = "SELECT * FROM subjects;";
 // On récupère l'état de la requête dans la variable $state
 $state = $connection->query($sql);
 
+if ($state === false) {
+    echo "Query error";
+    exit;
+}
+
 // Récupération des résultats de la requête
-$result = $state->fetchAll();
+$result = $state->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($result as $subject) {
+    echo '<h2>' . $subject['subject_name'] . '</h2>';
+}
 
 // Affichage des résultats
 echo "<pre>";
-var_dump($result);
