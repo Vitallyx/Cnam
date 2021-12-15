@@ -34,7 +34,5 @@ class DbConnect
         $this->password = $password;
 
         $dsn = "mysql:$this->host=$host;$this->port=$port;$this->dbname=$dbname;charset=utf8";
-
-        $connection = new PDO($dsn, $username, $password);
     }
 } // End of class
