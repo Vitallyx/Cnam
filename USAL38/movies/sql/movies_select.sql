@@ -45,3 +45,10 @@ SELECT person_lastname, person_firstname, role_name, movie_title FROM people
 	JOIN movies_people ON people.person_id = movies_people.person_id
 	JOIN roles ON roles.role_id = movies_people.role_id
 ;
+
+
+SELECT movie_title, movie_lenght, movie_year, person_lastname, role_name FROM movies
+	JOIN movies_people ON  movies.movie_id = movies_people.movie_id
+	JOIN roles ON roles.role_id = movies_people.role_id
+	JOIN people ON people.person_id = movies_people.person_id
+;
